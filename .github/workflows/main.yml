@@ -18,6 +18,10 @@ jobs:
       with:
         python-version: '3.12.2'
 
+    - name: Instalar dependências
+      run: |
+        pip install pytest  # Instale o pytest antes de executar os teste
+
     - name: Teste01
       run: |
         pytest Teste1.py  # Especifique o arquivo que contém os testes
