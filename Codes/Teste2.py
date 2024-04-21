@@ -2,6 +2,9 @@
 import unittest
 from unittest.mock import patch
 from io import StringIO
+from flask import Flask
+
+app = Flask(__name__)
 
 # Definir o tabuleiro como uma lista de 9 espaços vazios
 tabuleiro = [" " for i in range(9)]

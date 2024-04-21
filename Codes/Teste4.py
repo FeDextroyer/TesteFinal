@@ -1,4 +1,8 @@
 import re
+import unittest
+from flask import Flask
+
+app = Flask(__name__)
 
 class EmailValidator:
     allowed_domains = ['gmail.com', 'hotmail.com', 'bol.com', 'yahoo.com']

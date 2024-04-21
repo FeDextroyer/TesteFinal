@@ -1,3 +1,8 @@
+import unittest
+from flask import Flask
+
+app = Flask(__name__)
+
 class Calculator:
     @staticmethod
     def add(x, y):

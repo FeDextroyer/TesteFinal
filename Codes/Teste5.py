@@ -1,5 +1,9 @@
 import nltk
 from itertools import permutations
+import unittest
+from flask import Flask
+
+app = Flask(__name__)
 
 class AnagramGenerator:
     def __init__(self):
