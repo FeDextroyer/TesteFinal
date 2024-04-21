@@ -1,26 +1,42 @@
-name: Build & Test
+name: Construção e Testes
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set UTF-8 encoding for .NET
-      run: |
-        export LANG=en_US.UTF-8
-        export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Checkout código
+      uses: actions/checkout@v2
+
+    - name: Configurar ambiente Python
+      uses: actions/setup-python@v2
       with:
-        dotnet-version: 7.x
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build CalculadoraApp.sln
-    - name: Test
-      run: dotnet test Calculadora.Tests/Calculadora.Tests.csproj
+        python-version: '3.x'
+
+    - name: Instalar dependências
+      run: |
+        pip install pytest  # Instale o pytest antes de executar os testes
+
+    - name: Teste com pytest
+      run: |
+        pytest Teste1.py  # Especifique o arquivo que contém os testes
+
+    - name: Teste2
+      run: |
+        pytest Teste2.py
+
+    - name: Teste3
+      run: |
+        pytest Teste3.py
+
+    - name: Teste4
+      run: |
+        pytest Teste4.py
+
+    - name: Teste5
+      run: |
+        pytest Teste5.py
