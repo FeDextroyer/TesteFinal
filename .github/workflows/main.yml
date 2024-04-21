@@ -18,7 +18,7 @@ jobs:
           repository: FeDextroyer/TesteFinal
           ref: main
       # Passos para executar os testes usando pytest
-      - name: Teste2
+      - name: Teste1
         run: |
           pytest TesteFinal/Teste1.py
         
