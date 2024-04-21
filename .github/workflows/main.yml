@@ -23,20 +23,20 @@ jobs:
 
     - name: Teste01
       run: |
-        pytest Teste1.py  # Especifique o arquivo que contém os testes
+        pytest TesteFinal/Teste1.py  # Especifique o arquivo que contém os testes
         
     - name: Teste02
       run: |
-        pytest Teste2.py
+        pytest TesteFinal/Teste2.py
 
     - name: Teste03
       run: |
-        pytest Teste3.py
+        pytest TesteFinal/Teste3.py
 
     - name: Teste04
       run: |
-        pytest Teste4.py
+        pytest TesteFinal/Teste4.py
         
     - name: Teste05
       run: |
-        pytest Teste5.py
+        pytest TesteFinal/Teste5.py
