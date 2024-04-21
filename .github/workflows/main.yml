@@ -1,39 +1,42 @@
-# Fluxo de trabalho para Construção e Testes
 name: Construção e Testes
 
-# Gatilho para executar o fluxo de trabalho em pull requests na branch main
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  # Job chamado read-file
-  read-file:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      # Passo para verificar o repositório FeDextroyer/TesteFinal na branch main
-      - name: Checkout other repository
-        uses: actions/checkout@v2
-        with:
-          repository: FeDextroyer/TesteFinal
-          ref: main
-      # Passos para executar os testes usando pytest
-      - name: Teste1
-        run: |
-          pytest Teste1.py
+    - name: Checkout código
+      uses: actions/checkout@v2
+
+    - name: Configurar ambiente Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Instalar dependências
+      run: |
+        pip install pytest  # Instale o pytest antes de executar os testes
+
+    - name: Teste01
+      run: |
+        pytest Teste1.py  # Especifique o arquivo que contém os testes
         
-      - name: Teste2
-        run: |
-          pytest Teste2.py
-  
-      - name: Teste3
-        run: |
-          pytest Teste3.py
-  
-      - name: Teste4
-        run: |
-          pytest Teste4.py
-  
-      - name: Teste5
-        run: |
-          pytest Teste5.py
+    - name: Teste02
+      run: |
+        pytest Teste2.py
+
+    - name: Teste03
+      run: |
+        pytest Teste3.py
+
+    - name: Teste04
+      run: |
+        pytest Teste4.py
+        
+    - name: Teste05
+      run: |
+        pytest Teste5.py
