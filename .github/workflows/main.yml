@@ -24,20 +24,20 @@ jobs:
 
     - name: Teste01
       run: |
-        pytest Codes/Teste1.py  # Especifique o arquivo que contém os testes
+        python -m pytest Codes/Teste1.py  # Especifique o arquivo que contém os testes
         
     - name: Teste02
       run: |
-        pytest Codes/Teste2.py
+        python -m pytest Codes/Teste2.py
 
     - name: Teste03
       run: |
-        pytest Codes/Teste3.py
+        python -m pytest Codes/Teste3.py
 
     - name: Teste04
       run: |
-        pytest Codes/Teste4.py
+        python -m pytest Codes/Teste4.py
         
     - name: Teste05
       run: |
-        pytest Codes/Teste5.py
+        python -m pytest Codes/Teste5.py
