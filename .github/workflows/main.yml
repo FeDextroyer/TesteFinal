@@ -13,7 +13,6 @@ jobs:
         with:
           repository: FeDextroyer/TesteFinal
           ref: main
-          path: TesteFinal
       - name: Teste2
         run: |
           pytest Teste1.py
